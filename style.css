@@ -1,0 +1,161 @@
+body {
+    background-image: url("Page\ Design.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    margin-left: 5em;
+}
+h1{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #2B2E39;
+}
+h2{
+    font-weight: bolder;
+    font-size: 3em;
+    color: #2B2E39;
+}
+input{
+    color: black;
+    font-weight: medium;
+    font-size: 1em;
+    border-radius: 60px;
+    margin-right:1.5em;
+    width: 9em;
+    padding: 10px;
+    border: 1px solid gray;
+}
+#date{
+    width: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#date:focus{
+    width: 12em;
+}
+
+select{
+    /* color: black; */
+    font-weight: medium;
+    font-size: 1em;
+    margin-right:1.5em;
+    border-radius: 60px;
+    width: 10em;
+    padding: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 1px solid gray;
+    /* text-align: center; */
+}
+select:required:invalid {
+    color: #666;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: #000;
+}
+/* Removing the default arrow */
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+/* Custom arrow */
+select {
+    background-image: url("./expand_more.png");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+  }
+
+p{
+    font-weight: light;
+    font-size: 1.2em;
+    color: #2B2E39;
+    display: inline;
+}
+h3{
+    font-weight: bolder;
+    font-size: 1.4em;
+    color: #2B2E39;
+    display: inline;
+}
+button{
+    /* font-size: 30pt; */
+    background-image: linear-gradient(60deg, #2414DB, #AC6EFF);
+    color: white;
+    border-radius: 60px;
+    font-size: large;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    padding: 10px 50px;
+    cursor: pointer;
+    border: none;
+}
+.forInline{
+    display: inline;
+}
+
+/* Removing initial spinner */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom exclamation mark */
+#number {
+    background-image: url("./exclamation.png");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+}
+
+.hide {
+    display: none;
+    margin-left: 20em;
+}
+#number:hover + .hide {
+    display: block;
+    color: rgb(107, 151, 156);
+  }
+
+
+/* Responsive Media  */
+@media (max-width: 850px) {
+    body {
+        background-image: url("./mobile.jpg");
+        width: 80%;
+        margin-left: 15px;
+    }
+    #date{
+        margin-left: 3em;     
+    }
+    #fabric{
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+    #number{
+        margin-left: 3em;
+        margin-top: 1em;
+    }
+    .hide {
+        display: none;
+        margin-left: 3em;
+    }
+    button{
+        margin-top: 2em;
+        margin-left: 2em;
+    }
+    h2{
+        margin-top: 2px;
+        margin-bottom: 0.5em;
+    }
+    #last{
+        margin-left: 0.9em;
+        
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Date Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+</head>
+
+<body>
+        <h1>The Company</h1>
+
+        <h2>Shipping Time <br>Calculator</h2>
+
+        <div class="forInline">               
+                    
+            <input placeholder="Order Date" type="text" onfocus="(this.type = 'date')"  id="date"> 
+            <!-- Limiting the minimum date to today -->
+            <script>
+                date.min = new Date().toISOString().split("T")[0];
+            </script> 
+            
+            <select required id="fabric" class="select-wrapper">
+                <option value="" disabled selected>Fabric Type</option>
+                <option id="Cotton" value="Cotton">Cotton</option>
+                <option id="Linen" value="Linen">Linen</option>
+            </select>
+
+            <!-- Limiting the number between 1 and 100 -->
+            <input type="number" placeholder="Quantity" id="number" min="1" max="100" 
+            onkeyup="if(parseInt(this.value)>100){ this.value =100; return false; }else if(parseInt(this.value)<1){this.value =1; return false;}">
+            <div class="hide">Quanity should be between 1 and 100.</div>
+
+        </div>
+        
+
+        <div>
+            <button type="button" id="btn">Calculate</button>
+        </div>
+
+        <div class="forInline" id="last">
+            <p id="initial">Please enter your order information to estimate shipping date.<h3 id="output"></h3></p>
+        </div>
+        
+    
+</body>
+</html>
